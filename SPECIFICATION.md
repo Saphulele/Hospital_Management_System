@@ -8,7 +8,7 @@ Hospital Management System
 
 Healthcare Management
 
-**Problem Statement**
+# Problem Statement
 
 Many hospitals struggle with inefficient patient data management, leading to delays in treatment, miscommunication, and increased administrative workload. This project seeks to create a centralized Hospital Management System that ensures secure, efficient, and accurate hospital operations.
 
