@@ -17,4 +17,4 @@
 
 # Individual Scope
 
-**This project is feasible as it will utilize modern database systems, cloud-based storage, and secure access control to manage hospital records effectively. The system will be designed to be scalable and adaptable for hospitals of different sizes.**
+**The feasibility of this project is justified by the increasing need for digital transformation in healthcare. With advancements in database management, cloud computing, and secure authentication, the Hospital Management System can be efficiently implemented in hospitals of various sizes. The system's modular design ensures scalability, allowing future expansions such as telemedicine and AI-driven diagnostics. By reducing paperwork and automating administrative tasks, this system will improve hospital efficiency and enhance patient care while maintaining compliance with healthcare regulations.This project is feasible as it will utilize modern database systems, cloud-based storage, and secure access control to manage hospital records effectively. The system will be designed to be scalable and adaptable for hospitals of different sizes.**
