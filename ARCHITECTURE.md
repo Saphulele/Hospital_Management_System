@@ -1,4 +1,5 @@
-C4Context
+```mermaid
+graph TD;
   title Hospital Management System - Context Diagram
 
   Person(patient, "Patient", "Visits the hospital for consultations and treatments")
