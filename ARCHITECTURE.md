@@ -141,7 +141,7 @@
 
 ```
 
-# System Component Diagram
+# System Code Diagram
 
 ```mermaid
 
