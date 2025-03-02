@@ -65,38 +65,38 @@ Web Interface: Accessible by staff, doctors, and administrators to manage operat
 
 # 5. User Roles
 **Admin:**
-
 **Manages hospital operations, including adding staff, managing the hospital's services, and generating reports.
-Can access all records and manage settings.
-Doctor:**
+Can access all records and manage settings.**
 
+**Doctor:**
 **Manages patient medical records, diagnoses, prescriptions, and appointment schedules.
-Can view and update patient data.
-Nurse:**
+Can view and update patient data.**
 
+**Nurse:**
 **Assists in patient care and supports doctors.
-Can update patient status and assist in scheduling appointments.
-Patient:**
+Can update patient status and assist in scheduling appointments.**
 
+**Patient:**
 **Can register, book appointments, view medical records, and make payments.**
 
 # 6. System Workflow
 **Patient Registration:**
 
-**The patient fills in personal and medical details during the registration process, either through the web or mobile interface.
-Appointment Booking:**
+**The patient fills in personal and medical details during the registration process, either through the web or mobile interface.**
+
+**Appointment Booking:**
 
 **Patients can book appointments with available doctors through the system.
-Notifications are sent to both the doctor and patient for confirmation.
-Medical Consultation:**
+Notifications are sent to both the doctor and patient for confirmation.**
 
-**During the appointment, the doctor records medical information, diagnoses, and prescriptions in the system.
-Billing and Payment:**
+**Medical Consultation:**
+**During the appointment, the doctor records medical information, diagnoses, and prescriptions in the system.**
 
+**Billing and Payment:**
 **Once the consultation is complete, the billing details are generated, and the patient is notified.
-Payment can be made through integrated online payment systems.
-Report Generation:**
+Payment can be made through integrated online payment systems.**
 
+**Report Generation:**
 **Admins and authorized users can generate various reports, such as financial reports or patient visit statistics, for analysis and decision-making.**
 
 # 7. Security and Privacy
