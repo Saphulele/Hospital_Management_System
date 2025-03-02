@@ -35,22 +35,33 @@
 
 # 3. System Architecture
 **Frontend:
-Web Interface: Accessible by staff, doctors, and administrators to manage operations through a browser-based interface.
-Mobile App: Allows patients to access their records, book appointments, and pay bills via a mobile interface.
-Backend:
-API Server: Handles data requests from the frontend applications (web and mobile).
-Database: A relational database stores critical information such as patient records, appointments, and billing details.
-External Integrations:
-Insurance API: For insurance claim processing.
-Payment Gateway: To manage online payments.
-Notification Service: Sends alerts for appointments, billing reminders, and other notifications.**
+Web Interface: Accessible by staff, doctors, and administrators to manage operations through a browser-based interface.**
+
+**Mobile App: Allows patients to access their records, book appointments, and pay bills via a mobile interface.**
+
+**Backend:**
+**API Server: Handles data requests from the frontend applications (web and mobile).**
+
+**Database: A relational database stores critical information such as patient records, appointments, and billing details.**
+
+**External Integrations:**
+
+**Insurance API: For insurance claim processing.**
+
+**Payment Gateway: To manage online payments.**
+
+**Notification Service: Sends alerts for appointments, billing reminders, and other notifications.**
 
 # 4. System Components
-**Web Frontend: Developed using React.js to provide a dynamic and responsive user experience.
-Mobile Frontend: Developed using Flutter for cross-platform functionality, allowing patients to use the system on both Android and iOS.
-Backend: Node.js and Express.js to handle API requests, business logic, and interaction with the database.
-Database: MySQL or PostgreSQL database for storing patient records, appointments, medical history, and billing information.
-External Systems: Integration with third-party APIs such as payment systems (e.g., Stripe), insurance companies, and notification services.**
+**Web Frontend: Developed using React.js to provide a dynamic and responsive user experience.**
+
+**Mobile Frontend: Developed using Flutter for cross-platform functionality, allowing patients to use the system on both Android and iOS.**
+
+**Backend: Node.js and Express.js to handle API requests, business logic, and interaction with the database.**
+
+**Database: MySQL or PostgreSQL database for storing patient records, appointments, medical history, and billing information.**
+
+**External Systems: Integration with third-party APIs such as payment systems (e.g., Stripe), insurance companies, and notification services.**
 
 # 5. User Roles
 **Admin:**
