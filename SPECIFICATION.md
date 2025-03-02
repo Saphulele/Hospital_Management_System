@@ -21,12 +21,17 @@
 **The Hospital Management System (HMS) is a comprehensive software solution designed to automate various hospital functions, such as patient registration, appointment scheduling, billing, medical records management, and staff coordination. The system ensures smooth operations across various departments and provides a centralized platform for managing hospital services efficiently.**
 
 # 2. Key Features
-**Patient Management: Allows for easy registration, updating, and retrieval of patient details, including medical history and personal information.
-Appointment Scheduling: Facilitates patient appointment bookings with doctors, including reminders for both doctors and patients.
-Medical Records: Securely stores patient records, diagnoses, treatments, and prescriptions, which can be accessed by authorized personnel.
-Billing and Payments: Manages the generation of bills for medical services, insurance claims, and online payment integrations.
-Staff Management: Manages hospital staff data, including doctors, nurses, and administrative personnel.
-Reports and Analytics: Generates various reports such as patient visits, financial records, and operational analytics to help in decision-making.**
+**Patient Management: Allows for easy registration, updating, and retrieval of patient details, including medical history and personal information.**
+
+**Appointment Scheduling: Facilitates patient appointment bookings with doctors, including reminders for both doctors and patients.**
+
+**Medical Records: Securely stores patient records, diagnoses, treatments, and prescriptions, which can be accessed by authorized personnel.**
+
+**Billing and Payments: Manages the generation of bills for medical services, insurance claims, and online payment integrations.**
+
+**Staff Management: Manages hospital staff data, including doctors, nurses, and administrative personnel.**
+
+**Reports and Analytics: Generates various reports such as patient visits, financial records, and operational analytics to help in decision-making.**
 
 # 3. System Architecture
 **Frontend:
