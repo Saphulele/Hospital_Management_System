@@ -1,3 +1,5 @@
+#                                                                          CHALLENGES
+
 # **1. Diverse Stakeholder Groups**
 **Patients:** Expect seamless care, quick service, and privacy.
 
@@ -57,7 +59,7 @@ Hospitals operate 24/7, and any downtime or inefficiency in the HMS can directly
 
 **Challenge:** Implementing changes or updates without disrupting hospital operations is a significant challenge.
 
-**10. Cultural and Organizational Differences**
+# **10. Cultural and Organizational Differences**
 Different departments within a hospital may have unique workflows and priorities.
 
 **Challenge:** Creating a unified system that accommodates these differences without causing friction.
