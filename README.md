@@ -16,3 +16,4 @@ https://github.com/Saphulele/Hospital_Management_System/blob/main/SPECIFICATION.
 https://github.com/Saphulele/Hospital_Management_System/blob/main/ARCHITECTURE.md
 https://github.com/Saphulele/Hospital_Management_System/blob/main/REFLECTION.md
 https://github.com/Saphulele/Hospital_Management_System/blob/main/STAKEHOLDER%20ANALYSIS%20TABLE.md
+https://github.com/Saphulele/Hospital_Management_System/blob/main/SYSTEM%20REQUIREMENTS%20DOCUMENT.md
