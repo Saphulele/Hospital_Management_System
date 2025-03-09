@@ -114,3 +114,38 @@ Doctors can mark an appointment as an emergency and reschedule other appointment
 Notifications are sent to affected patients within 5 minutes of the override.
 
 Emergency overrides are logged and reported to administrators.
+
+
+#                                       Non-Functional Requirements
+
+**Usability**
+The system interface shall comply with WCAG 2.1 accessibility standards to ensure accessibility for healthcare professionals and patients with disabilities.
+
+The system shall provide an intuitive dashboard for doctors, nurses, and administrators to quickly access patient records, appointments, and reports.
+
+The system shall support multi-language functionality (e.g., English, Spanish, French) to cater to diverse healthcare providers and patients.
+
+**Deployability**
+The system shall be deployable on Windows, Linux, and macOS platforms to support various hospital IT infrastructures.
+
+The system shall support containerization using Docker for easy deployment and scaling across different environments.
+
+**Maintainability**
+Documentation shall include a comprehensive API guide for future integrations with third-party systems (e.g., lab systems, pharmacy systems).
+
+The system shall log all critical errors with timestamps, severity levels, and user actions for easier debugging and maintenance.
+
+**Scalability**
+The system shall support 1000 concurrent users (e.g., doctors, nurses, patients) during peak hours without performance degradation.
+
+The system shall be able to scale horizontally by adding additional servers to handle increased patient load during emergencies or pandemics.
+
+**Security**
+All patient data shall be encrypted using AES-256 encryption to ensure confidentiality and compliance with healthcare regulations (e.g., HIPAA, GDPR).
+
+The system shall enforce role-based access control (RBAC) to restrict access to sensitive patient records based on user roles (e.g., doctor, nurse, admin).
+
+**Performance**
+Patient search results (e.g., name, ID, or medical history) shall load within 1 second for 95% of queries.
+
+The system shall handle 10000 transactions per minute (e.g., appointment bookings, lab reports, billing) without degradation in performance.
