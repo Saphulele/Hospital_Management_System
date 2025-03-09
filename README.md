@@ -14,3 +14,4 @@ This project aims to develop a comprehensive Hospital Management System to strea
 
 https://github.com/Saphulele/Hospital_Management_System/blob/main/SPECIFICATION.md
 https://github.com/Saphulele/Hospital_Management_System/blob/main/ARCHITECTURE.md
+https://github.com/Saphulele/Hospital_Management_System/blob/main/REFLECTION.md
