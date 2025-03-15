@@ -31,9 +31,9 @@ System displays a confirmation message with the patient ID.
 
 **Alternative Flows:**
 
-**AF1:** Mandatory fields missing: If any mandatory field is empty, the system displays an error message and prompts the patient to fill in the missing details.
+**Alternative Flow 1:** Mandatory fields missing: If any mandatory field is empty, the system displays an error message and prompts the patient to fill in the missing details.
 
-**AF2:** Duplicate registration: If the patient is already registered, the system displays an error message and redirects the patient to the login page.
+**Alternative Flow 2:** Duplicate registration: If the patient is already registered, the system displays an error message and redirects the patient to the login page.
 
 # 2. Schedule Appointment
 **Description:**
@@ -67,11 +67,11 @@ System updates the doctor’s schedule.
 
 **Alternative Flows:**
 
-**AF1:** No available slots: If no slots are available, the system suggests alternative dates/times.
+**Alternative Flow 1:** No available slots: If no slots are available, the system suggests alternative dates/times.
 
-**AF2:** Rescheduling: Patient selects an existing appointment and chooses a new time slot.
+**Alternative Flow 2:** Rescheduling: Patient selects an existing appointment and chooses a new time slot.
 
-**AF3:** Cancellation: Patient cancels an appointment, and the system frees up the time slot.
+**Alternative Flow 3:** Cancellation: Patient cancels an appointment, and the system frees up the time slot.
 
 # 3. Update Medical Records
 **Description:**
@@ -103,9 +103,9 @@ System logs the update with a timestamp and doctor’s name.
 
 **Alternative Flows:**
 
-**AF1:** Invalid patient ID: If the patient ID is invalid, the system displays an error message.
+**Alternative Flow 1:** Invalid patient ID: If the patient ID is invalid, the system displays an error message.
 
-**AF2:** Unauthorized access: If the doctor does not have permission to access the record, the system denies access.
+**Alternative Flow 2:** Unauthorized access: If the doctor does not have permission to access the record, the system denies access.
 
 # 4. Generate Bill
 **Description:**
@@ -137,27 +137,27 @@ System updates the payment status and sends a receipt.
 
 **Alternative Flows:**
 
-**AF1:** Insurance claim: If the patient has insurance, the system processes the claim and updates the bill accordingly.
+**Alternative Flow 1:** Insurance claim: If the patient has insurance, the system processes the claim and updates the bill accordingly.
 
-**AF2:** Payment failure: If the payment fails, the system notifies the patient and prompts them to retry.
+**Alternative Flow 2:** Payment failure: If the payment fails, the system notifies the patient and prompts them to retry.
 
 # 5. Send Notifications
-Description:
+**Description:**
 Sends notifications to patients for appointment reminders, test results, and billing updates.
 
-Preconditions:
+**Preconditions:**
 
 The event (e.g., appointment, test result, or bill) is triggered in the system.
 
 The patient’s contact information is available.
 
-Postconditions:
+**Postconditions:**
 
 The notification is delivered to the patient via email/SMS.
 
 The notification is logged in the system.
 
-Basic Flow:
+**Basic Flow:**
 
 System detects an event (e.g., upcoming appointment, test result, or bill generation).
 
@@ -167,29 +167,29 @@ System sends the notification via email/SMS.
 
 System logs the notification delivery.
 
-Alternative Flows:
+**Alternative Flows:**
 
-AF1: Notification failure: If the notification fails to deliver, the system retries or alerts the admin.
+**Alternative Flow 1:** Notification failure: If the notification fails to deliver, the system retries or alerts the admin.
 
-AF2: Patient preferences: If the patient has opted out of notifications, the system skips sending.
+**Alternative Flow 2:** Patient preferences: If the patient has opted out of notifications, the system skips sending.
 
-6. Secure Messaging
-Description:
+# 6. Secure Messaging
+**Description:**
 Provides a secure messaging system for doctors, nurses, and staff to communicate.
 
-Preconditions:
+**Preconditions:**
 
 The user (doctor, nurse, or staff) is logged into the system.
 
 The recipient is available in the system.
 
-Postconditions:
+**Postconditions:**
 
 The message is delivered and stored securely.
 
 The message is logged with a timestamp.
 
-Basic Flow:
+**Basic Flow:**
 
 User logs into the system and navigates to the messaging feature.
 
@@ -201,29 +201,29 @@ Recipient receives the message within 2 seconds.
 
 System logs the message with a timestamp.
 
-Alternative Flows:
+**Alternative Flows:**
 
-AF1: Recipient unavailable: If the recipient is not available, the system stores the message and delivers it later.
+**Alternative Flow 1:** Recipient unavailable: If the recipient is not available, the system stores the message and delivers it later.
 
-AF2: Unauthorized access: If the user does not have permission to message the recipient, the system denies the request.
+**Alternative Flow 2:** Unauthorized access: If the user does not have permission to message the recipient, the system denies the request.
 
-7. Manage Access Control
-Description:
+# 7. Manage Access Control
+**Description:**
 Allows administrators to configure role-based access control (RBAC) for all users.
 
-Preconditions:
+**Preconditions:**
 
 The admin is logged into the system.
 
 The user roles and permissions are defined in the system.
 
-Postconditions:
+**Postconditions:**
 
 User roles and permissions are updated in the system.
 
 Access control policies are enforced.
 
-Basic Flow:
+**Basic Flow:**
 
 Admin logs into the system and navigates to the access control settings.
 
@@ -233,29 +233,29 @@ System validates the changes and updates the user’s access rights.
 
 System enforces the new access control policies.
 
-Alternative Flows:
+**Alternative Flows:**
 
-AF1: Invalid role: If the role is invalid, the system displays an error message.
+**Alternative Flow 1:** Invalid role: If the role is invalid, the system displays an error message.
 
-AF2: Unauthorized changes: If the admin does not have permission to modify access control, the system denies the request.
+**Alternative Flow 2:** Unauthorized changes: If the admin does not have permission to modify access control, the system denies the request.
 
-8. Emergency Override
-Description:
+# 8. Emergency Override
+**Description:**
 Allows doctors to override appointment schedules in case of emergencies.
 
-Preconditions:
+**Preconditions:**
 
 The doctor is logged into the system.
 
 An emergency situation is declared.
 
-Postconditions:
+**Postconditions:**
 
 The appointment schedule is updated.
 
 Affected patients are notified.
 
-Basic Flow:
+**Basic Flow:**
 
 Doctor logs into the system and marks an appointment as an emergency.
 
@@ -265,8 +265,8 @@ System notifies affected patients within 5 minutes.
 
 System logs the emergency override.
 
-Alternative Flows:
+**Alternative Flows:**
 
-AF1: No available slots: If no slots are available, the system alerts the admin.
+**Alternative Flow 1:** No available slots: If no slots are available, the system alerts the admin.
 
-AF2: Patient refusal: If a patient refuses the rescheduled appointment, the system cancels the appointment.
+**Alternative Flow 2:** Patient refusal: If a patient refuses the rescheduled appointment, the system cancels the appointment.
