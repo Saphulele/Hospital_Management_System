@@ -1,3 +1,4 @@
+ # Hospital Management System
 ```mermaid
 
 graph TD
