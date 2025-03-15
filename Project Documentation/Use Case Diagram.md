@@ -52,16 +52,16 @@ graph TD
 
 **Doctor:** Manages appointments, updates medical records, and communicates with patients.
 
-Nurse: Assists doctors and communicates with patients.
+**Nurse:** Assists doctors and communicates with patients.
 
-Admin: Manages system settings, user roles, and access control.
+**Admin:** Manages system settings, user roles, and access control.
 
-Billing Staff: Handles billing and insurance claims.
+**Billing Staff:** Handles billing and insurance claims.
 
-System: Automates notifications, reminders, and logs.
+**System:** Automates notifications, reminders, and logs.
 
-Use Cases:
-Patient Registration:
+# Use Cases:
+**Patient Registration:**
 
 Patient provides personal details (name, contact, medical history).
 
@@ -69,7 +69,7 @@ System generates a unique patient ID.
 
 Mandatory fields are validated before submission.
 
-Schedule Appointment:
+**Schedule Appointment:**
 
 Patient views real-time availability of doctors and rooms.
 
@@ -77,19 +77,19 @@ Patient books, reschedules, or cancels appointments.
 
 System sends confirmation via email/SMS within 10 seconds.
 
-Update Medical Records:
+**Update Medical Records:**
 
 Doctor views and updates patient medical records.
 
 System logs updates with timestamps and doctor’s name.
 
-View Doctor Schedule:
+**View Doctor Schedule:**
 
 Doctor views daily, weekly, or monthly schedules.
 
 System sends automated reminders 1 hour before appointments.
 
-Generate Bill:
+**Generate Bill:**
 
 System generates bills for consultations, tests, and treatments.
 
@@ -97,31 +97,31 @@ Patient views and pays bills online.
 
 Insurance claims are processed within 1 hour.
 
-Send Notifications:
+**Send Notifications:**
 
 System sends notifications for appointment reminders, test results, and billing.
 
 Notifications are delivered via email/SMS within 5 seconds.
 
-Secure Messaging:
+**Secure Messaging:**
 
 Doctors, nurses, and staff send and receive encrypted messages.
 
 Messages are delivered within 2 seconds.
 
-Manage Access Control:
+**Manage Access Control:**
 
 Admin configures role-based access control (RBAC).
 
 Patients, doctors, and staff have restricted access based on roles.
 
-Emergency Override:
+**Emergency Override:**
 
 Doctor overrides appointment schedules in emergencies.
 
 System reschedules appointments and notifies affected patients within 5 minutes.
 
-Access Patient Portal:
+**Access Patient Portal:**
 
 Patient logs in securely to view medical records, test results, and communicate with doctors.
 
