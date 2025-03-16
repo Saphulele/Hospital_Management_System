@@ -10,3 +10,29 @@
 | Test Case-006  |     FR-006     |Doctor updates patient medical records                 | 1. Log in as a doctor. 2. Search for a patient. 3. Update the medical record and save.               | Record is updated, and the change is logged with a timestamp and doctor’s name.                 |                     |                        |
 | Test Case-007  |     FR-007     |Doctor views daily schedule                 |1. Log in as a doctor. 2. Navigate to the schedule view.                | Daily schedule is displayed, including patient list and appointment times.                 |                     |                        |
 | Test Case-008  |     FR-008     |System prevents overlapping appointments                 | 1. Log in as a doctor. 2. Attempt to schedule two appointments at the same time.               | System flags the overlap and prevents scheduling.                 |                     |                        |
+
+
+
+# Non-Functional Test Scenarios
+
+**1. Performance Test**
+**Scenario:** Simulate 1,000 concurrent users accessing the patient portal to view medical records.
+
+**Steps:**
+
+Use a load testing tool to simulate 1,000 concurrent users.
+
+Measure the response time for accessing medical records.
+
+**Expected Result:** Response time ≤ 3 seconds for 95% of requests.
+
+**2. Security Test**
+**Scenario:** Verify encryption of sensitive data in transit and at rest.
+
+**Steps:**
+
+Use a network monitoring tool to capture data packets during transmission.
+
+Inspect the database to ensure data is encrypted at rest.
+
+**Expected Result:** All sensitive data is encrypted in transit and at rest.
