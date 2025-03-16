@@ -1,3 +1,5 @@
+# Test Case Table
+
 |Test Case ID    | Requirement ID | Description     | Steps          | Expected Results | Actual Results      |  Status(Pass/Fail)     |
 |----------------|----------------|-----------------|----------------|------------------|---------------------|------------------------|
 | Test Case-001  |     FR-001     |Patient registration with all mandatory fields filled                 |1. Enter valid name, contact information, and medical history. 2. Submit the form.                |A unique patient ID is generated, and the registration is successful.                  |                     |                        |
