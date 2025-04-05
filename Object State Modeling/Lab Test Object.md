@@ -3,7 +3,11 @@
 ```mermaid
 stateDiagram-v2
     [*] --> Ordered
-    Ordered --> Collected: Sample taken\n(guard: patient prepared)
+    Ordered --> Collected: Sample taken
+    note right of Collected
+        Guard: patient properly prepared
+    end note
+    
     Collected --> InProgress: Lab receives
     InProgress --> Completed: Results ready
     Completed --> Verified: Doctor reviews
@@ -12,7 +16,11 @@ stateDiagram-v2
     Rejected --> Ordered: New sample needed
     Archived --> [*]
     
-    InProgress --> CriticalAlert: Abnormal results\n(guard: life-threatening)
+    InProgress --> CriticalAlert: Abnormal results
+    note right of CriticalAlert
+        Guard: results are life-threatening
+    end note
+    
     CriticalAlert --> DoctorNotified: Immediate contact
     DoctorNotified --> Completed: Response received
 ```
