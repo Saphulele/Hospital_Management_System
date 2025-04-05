@@ -1,10 +1,10 @@
 # Staff Member Object
 
 ```mermaid
-
 stateDiagram-v2
     [*] --> Candidate
-    Candidate --> Onboarding: Hiring approved\n(guard: background check)
+    Candidate --> Onboarding: Hiring approved
+    note right of Candidate: Requires background check
     Onboarding --> Active: Training completed
     Active --> OnLeave: Leave approved
     OnLeave --> Active: Leave period ends
@@ -14,8 +14,10 @@ stateDiagram-v2
     Active --> Terminated: Resignation/retirement
     Terminated --> [*]
     
-    Onboarding --> Rejected: Failed requirements\n(guard: failed training)
-    Active --> InternalInvestigation: Complaint received\n(guard: credible evidence)
+    Onboarding --> Rejected: Failed requirements
+    note right of Onboarding: Includes failed training
+    Active --> InternalInvestigation: Complaint received
+    note right of InternalInvestigation: Requires credible evidence
     InternalInvestigation --> Active: Cleared
     InternalInvestigation --> Suspended: Wrongdoing found
 ```
