@@ -1,18 +1,33 @@
 # Billing Invoice Object
 
+```mermaid
+
 stateDiagram-v2
     [*] --> Generated
     Generated --> Pending: Sent to patient
-    Pending --> PartialPayment: Initial payment\n(guard: >minimum amount)
+    Pending --> PartialPayment: Initial payment
+    note right of PartialPayment
+        Requires > minimum amount
+    end note
     PartialPayment --> Paid: Balance cleared
     Pending --> Paid: Full payment
-    Pending --> Overdue: Past due date\n(guard: >30 days)
-    Overdue --> Collections: Further overdue\n(guard: >90 days)
+    Pending --> Overdue: Past due date
+    note right of Overdue
+        After 30+ days without payment
+    end note
+    Overdue --> Collections: Further overdue
+    note right of Collections
+        After 90+ days without payment
+    end note
     Overdue --> Paid: Late payment
     Collections --> Paid: Debt settled
-    Collections --> WrittenOff: Uncollectible\n(guard: management approval)
+    Collections --> WrittenOff: Uncollectible
+    note right of WrittenOff
+        Requires management approval
+    end note
     Paid --> [*]
     WrittenOff --> [*]
+```
 
  **Key States:** Generated, Pending, PartialPayment, Paid, Overdue, Collections, WrittenOff
 
