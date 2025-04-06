@@ -2,17 +2,16 @@
 
 ```mermaid
 
-activityDiagram
-    title Lab Test Order & Processing
-    swimlane Doctor
-    swimlane Lab
-    swimlane Patient
-
-    Doctor --> Doctor: Order Test
-    Doctor --> Lab: Send Test Request
-    Lab --> Lab: Process Sample
-    Lab --> Doctor: Send Results
-    Doctor --> Patient: Discuss Results
+sequenceDiagram
+    participant D as Doctor
+    participant L as Lab
+    participant P as Patient
+    
+    D->>D: Order Test
+    D->>L: Send Test Request
+    L->>L: Process Sample
+    L->>D: Send Results
+    D->>P: Discuss Results
 ```
 
 **Stakeholders:** Doctors, Lab Technicians, Patients.
