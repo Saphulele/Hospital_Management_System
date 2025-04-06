@@ -2,14 +2,21 @@
 
 ```mermaid
 
-activityDiagram
-    title Appointment Rescheduling
-    swimlane Patient
-    swimlane Receptionist
-
-    Patient --> Receptionist: Request Reschedule
-    Receptionist --> Receptionist: Check Availability
-    Receptionist --> Patient: Confirm New Slot
+flowchart TD
+    title[Appointment Rescheduling]
+    
+    subgraph Patient
+        A[Patient requests reschedule]
+    end
+    
+    subgraph Receptionist
+        B[Check availability]
+        C[Confirm new slot]
+    end
+    
+    A --> B
+    B --> C
+    C --> D[Appointment rescheduled]
 ```
 
 **Stakeholders:** Patients, Receptionists.
