@@ -2,21 +2,20 @@
 
 ```mermaid
 
-activityDiagram
-    title Patient Admission Workflow
-    swimlane Patient
-    swimlane Front Desk
-    swimlane Doctor
-    swimlane Billing
-
-    Patient --> Front Desk: Submit Details
-    Front Desk --> Front Desk: Verify Insurance
-    Front Desk --> Doctor: Assign Bed & Doctor
-    Doctor --> Doctor: Perform Initial Assessment
-    Doctor --> Billing: Generate Admission Invoice
-    Billing --> Patient: Collect Payment
-    Patient --> Front Desk: Complete Admission
-    Front Desk --> End: Admission Confirmed
+sequenceDiagram
+    participant P as Patient
+    participant F as Front Desk
+    participant D as Doctor
+    participant B as Billing
+    
+    P->>F: Submit Details
+    F->>F: Verify Insurance
+    F->>D: Assign Bed & Doctor
+    D->>D: Perform Initial Assessment
+    D->>B: Generate Admission Invoice
+    B->>P: Collect Payment
+    P->>F: Complete Admission
+    F->>F: Admission Confirmed
 ```
 
 **Stakeholders:** Patients, Front Desk Staff, Doctors, Billing Department.
