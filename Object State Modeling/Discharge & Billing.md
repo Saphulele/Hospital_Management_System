@@ -2,17 +2,34 @@
 
 ```mermaid
 
-activityDiagram
-    title Discharge Workflow
-    swimlane Doctor
-    swimlane Nurse
-    swimlane Billing
-
-    Doctor --> Nurse: Approve Discharge
-    Nurse --> Billing: Finalize Charges
-    Billing --> Patient: Generate Bill
-    Patient --> Billing: Make Payment
-    Billing --> Nurse: Confirm Discharge
+flowchart TD
+    title[Discharge Workflow]
+    
+    subgraph Doctor
+        A[Approve Discharge]
+    end
+    
+    subgraph Nurse
+        B[Process Discharge]
+        F[Complete Discharge]
+    end
+    
+    subgraph Billing
+        C[Finalize Charges]
+        D[Generate Bill]
+        E[Process Payment]
+    end
+    
+    subgraph Patient
+        P[Make Payment]
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> P
+    P --> E
+    E --> F
 ```
 
 **Stakeholders:** Patients, Billing, Nurses.
