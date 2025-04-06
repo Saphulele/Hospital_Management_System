@@ -2,15 +2,25 @@
 
 ```mermaid
 
-activityDiagram
-    title ER Triage Workflow
-    swimlane Triage Nurse
-    swimlane ER Doctor
-
-    Triage Nurse --> Triage Nurse: Assess Severity
-    Triage Nurse --> ER Doctor: Critical? (Yes)
-    ER Doctor --> ER Doctor: Immediate Treatment
-    Triage Nurse --> Triage Nurse: Non-Critical? (No)
+flowchart TD
+    start[Patient Arrives]
+    
+    subgraph "Triage Nurse"
+        assess[Assess Severity]
+        decision{Critical?}
+        queue[Place in Queue by Priority]
+    end
+    
+    subgraph "ER Doctor"
+        immediate[Immediate Treatment]
+        routine[Routine Treatment]
+    end
+    
+    start --> assess
+    assess --> decision
+    decision -->|Yes| immediate
+    decision -->|No| queue
+    queue --> routine
 ```
 **Stakeholders:** ER Staff, Patients.
 **Concerns:** Prioritization, life-threatening cases.
