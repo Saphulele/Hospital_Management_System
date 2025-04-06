@@ -2,16 +2,15 @@
 
 ```mermaid
 
-activityDiagram
-    title Prescription Workflow
-    swimlane Doctor
-    swimlane Pharmacy
-    swimlane Patient
-
-    Doctor --> Doctor: Prescribe Medication
-    Doctor --> Pharmacy: Send E-Prescription
-    Pharmacy --> Pharmacy: Check Stock & Allergies
-    Pharmacy --> Patient: Dispense Medication
+sequenceDiagram
+    participant D as Doctor
+    participant Ph as Pharmacy
+    participant Pa as Patient
+    
+    D->>D: Prescribe Medication
+    D->>Ph: Send E-Prescription
+    Ph->>Ph: Check Stock & Allergies
+    Ph->>Pa: Dispense Medication
 ```
 
 **Stakeholders:** Doctors, Pharmacists, Patients.
