@@ -2,16 +2,15 @@
 
 ```mermaid
 
-activityDiagram
-    title Surgery Scheduling
-    swimlane Surgeon
-    swimlane OR Staff
-    swimlane Nurse
-
-    Surgeon --> OR Staff: Request Surgery Slot
-    OR Staff --> OR Staff: Check OR Availability
-    OR Staff --> Nurse: Prepare Patient
-    Nurse --> Surgeon: Confirm Readiness
+sequenceDiagram
+    participant S as Surgeon
+    participant OR as OR Staff
+    participant N as Nurse
+    
+    S->>OR: Request Surgery Slot
+    OR->>OR: Check OR Availability
+    OR->>N: Prepare Patient
+    N->>S: Confirm Readiness
 ```
 
 **Stakeholders:** Surgeons, Nurses, OR Staff.
