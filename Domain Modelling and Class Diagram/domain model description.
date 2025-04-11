@@ -1,0 +1,11 @@
+# Hospital Management System - Domain Model
+
+| Entity          | Attributes                                | Methods                                  | Relationships                     | Business Rules                                                                 |
+|-----------------|-------------------------------------------|------------------------------------------|-----------------------------------|--------------------------------------------------------------------------------|
+| **Patient**     | `patientId`, `name`, `dob`, `contact`, `medicalHistory`, `accountStatus` | `register()`, `updateInfo()`, `viewAppointments()` | `Appointment`, `MedicalRecord`, `Billing` | 1. Only **one active** appointment per `Doctor`.<br>5. Unpaid bills >60 days suspend account. |
+| **Doctor**      | `doctorId`, `name`, `specialization`, `contact`, `schedule`, `maxDailyAppointments` | `viewSchedule()`, `prescribeMedication()`, `diagnose()` | `Appointment`, `Prescription` | 2. Max **20 appointments/day**.<br>7. No overlapping appointments. |
+| **Appointment** | `appointmentId`, `dateTime`, `status`, `reason`, `isActive` | `schedule()`, `cancel()`, `reschedule()` | `Patient`, `Doctor`, `Room` | 1. Unique active slot per `Patient`-`Doctor`.<br>7. No overlaps for `Doctor`/`Room`. |
+| **MedicalRecord** | `recordId`, `diagnosis`, `treatment`, `prescriptions`, `notes`, `isArchived` | `addDiagnosis()`, `updateTreatment()` | `Patient`, `Doctor` | 6. **Permanently archived** (no deletion). |
+| **Prescription** | `prescriptionId`, `medication`, `dosage`, `instructions`, `issueDate`, `expiryDate` | `issue()`, `refill()`, `verify()` | `Doctor`, `Patient`, `Appointment` | 3. Requires valid `Appointment`.<br>Expires in **30 days**. |
+| **Billing**     | `billId`, `amount`, `dueDate`, `status`, `services` | `generateBill()`, `processPayment()` | `Patient`, `Appointment` | 5. Unpaid bills >60 days suspend `Patient`. |
+| **Room**        | `roomId`, `type`, `status`, `capacity`   | `assignPatient()`, `release()`          | `Patient`, `Appointment` | 4. Assigned by **condition** (e.g., ICU).<br>7. No overlaps for `Room`. |
