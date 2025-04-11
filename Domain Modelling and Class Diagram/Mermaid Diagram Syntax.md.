@@ -1,0 +1,96 @@
+```mermaid
+
+classDiagram
+    %% Person Base Class
+    class Person {
+        <<abstract>>
+        -id: String
+        -name: String
+        -contactInfo: String
+        +getDetails() String
+    }
+
+    %% Patient Class
+    class Patient {
+        -patientId: String
+        -medicalHistory: List~MedicalRecord~
+        -currentMedications: List~String~
+        +requestAppointment()
+        +viewMedicalHistory()
+    }
+
+    %% Staff Hierarchy
+    class Staff {
+        <<abstract>>
+        -staffId: String
+        -department: String
+        -joinDate: Date
+    }
+
+    class Doctor {
+        -specialization: String
+        -qualifications: List~String~
+        +prescribeMedication()
+        +diagnosePatient()
+    }
+
+    class Nurse {
+        -shift: String
+        +assistDoctor()
+        +monitorPatient()
+    }
+
+    class AdministrativeStaff {
+        -role: String
+        +manageAppointments()
+        +processBilling()
+    }
+
+    %% Hospital Components
+    class Department {
+        -deptId: String
+        -name: String
+        -head: Doctor
+        +addStaff()
+    }
+
+    class Appointment {
+        -appointmentId: String
+        -dateTime: DateTime
+        -status: String
+        +reschedule()
+        +cancel()
+    }
+
+    class MedicalRecord {
+        -recordId: String
+        -diagnosis: String
+        -treatment: String
+        +updateRecord()
+    }
+
+    class Hospital {
+        -name: String
+        -departments: List~Department~
+        +admitPatient()
+        +dischargePatient()
+    }
+
+    %% Relationships
+    Person <|-- Patient
+    Person <|-- Staff
+    Staff <|-- Doctor
+    Staff <|-- Nurse
+    Staff <|-- AdministrativeStaff
+
+    Hospital "1" *-- "1..*" Department : contains
+    Department "1" o-- "0..*" Staff : employs
+    Patient "1" -- "0..*" Appointment : schedules
+    Doctor "1" -- "0..*" Appointment : handles
+    Patient "1" -- "1..*" MedicalRecord : has
+    Doctor "1" -- "0..*" MedicalRecord : updates
+
+    %% Notes
+    note for Person "Base class for all human entities\nin the system"
+    note for Hospital "Singleton pattern recommended\nfor Hospital class"
+    note for Department "Aggregation relationship with Staff\n(Staff can exist without Department)"
